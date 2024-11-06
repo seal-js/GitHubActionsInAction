@@ -14,5 +14,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Run a Perl script
-        run: print %ENV
+      - run: print %ENV
           shell: perl {0}
