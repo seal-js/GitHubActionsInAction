@@ -15,7 +15,8 @@ jobs:
         uses: actions/checkout@v4.2.2
       - name: Run a Perl script
         run: |
-          print "Hello World!";
+          use Data::Dumper;
+          print "Hello World!\n";
           print '-' x 80 . "\n";
-          print %ENV
+          print Data::Dumper->Dump([\%ENV], [qw(ENV)]);
         shell: perl {0}
