@@ -7,12 +7,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  MyFirstJob:
+  FirstPerlJob:
     runs-on:  ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Run a Perl script
-        run: print %ENV
+        run: |
+          print "Hello World!";
+          print '-' x 80 . "\n";
+          print %ENV
         shell: perl {0}
