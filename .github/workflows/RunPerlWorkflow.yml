@@ -16,6 +16,7 @@ jobs:
       - name: Run a Perl script
         run: |
           use Data::Dumper;
+          $Data::Dumper::Sortkeys = 1;
           print "Hello World!\n";
           print '-' x 80 . "\n";
           print Data::Dumper->Dump([\%ENV], [qw(ENV)]);
