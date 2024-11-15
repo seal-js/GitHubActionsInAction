@@ -25,6 +25,10 @@ on:
         description: 'Environment to run tests again'
         type: environment
         required: true
+        options:
+        - staging
+        - development
+        - production
         
 
 jobs:
