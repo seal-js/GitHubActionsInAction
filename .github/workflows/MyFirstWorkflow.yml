@@ -21,10 +21,6 @@ on:
         description: 'Apply tag after successfull test run'
         required: true
         type: boolean
-      environment:
-        description: 'Environment to run tests again'
-        type: environment
-        required: true
         
 
 jobs:
