@@ -29,6 +29,13 @@ jobs:
 
     steps:
       - run: echo "Hello World!"
+      
+      - run: |
+          echo "Homedrive: ${{ inputs.homedrive }}"
+          echo "Homedrive: ${{ inputs.loglevel }}"
+          echo "Homedrive: ${{ inputs.tag}}"
+        name: Workflow inputs
+        if: ${{ github.event_name == 'workflow_dispatch' }}
 
       - name: Checkout
         uses: actions/checkout@v4.2.2
