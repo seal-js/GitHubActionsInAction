@@ -13,9 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      the_secret: 'Ex$!oK%&üp'
-
     steps:
       - name: Generate, mask and output a secret  
         id: sets-a-secret
