@@ -17,8 +17,8 @@ jobs:
       the_secret: 'Ex$!oK%&üp'
 
     steps:
-      - id: sets-a-secret
-        name: Generate, mask and output a secret  
+      - name: Generate, mask and output a secret  
+        id: sets-a-secret
         run: |
           THE_SECRET='Ex$!oK%&üp'
           echo "::add-mask::$THE_SECRET"
