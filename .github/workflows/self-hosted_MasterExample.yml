@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI training
+name: MASTER Create Apache package
 
 # Controls when the workflow will run
 on:
@@ -41,5 +41,6 @@ jobs:
   
       - name: Copy apache from master to scratch/keep/js/Linux
         run: |
+          set -x
           mkdir -p /home/scratch/keep/js/Linux/TEMP/apache
             cp -TRv /home/master/apache_2.4.57 /home/scratch/keep/js/Linux/TEMP/apache
